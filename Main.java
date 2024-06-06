@@ -45,6 +45,18 @@ public class Main{
             pembunuhMap.remove(korban);
         }
         }
+        scanner.close();
+
+        for (String korban : korbanSet) {
+            pembunuhMap.remove(korban);
+        }
+
+        List<String> daftarPembunuh = new ArrayList<>(pembunuhMap.keySet());
+        Collections.sort(daftarPembunuh);
+        System.out.println("DAFTAR PENCARIAN ORANG KASUS PEMBUNUHAN");
+        for (String pembunuh : daftarPembunuh) {
+            System.out.println(pembunuh + " " + pembunuhMap.get(pembunuh));
+        }
 
     }
 }
